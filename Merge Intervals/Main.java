@@ -2,7 +2,7 @@
 import java.util.Arrays;
 
 class Main {
-    static int[][] maxSubArray(int[][] intervals) {
+    static int[][] mergeIntervals(int[][] intervals) {
         Arrays.sort(intervals, (val1, val2) -> Integer.compare(val1[0], val2[0]));
         int k = 0;
         int[] prevRange = intervals[0];
@@ -24,7 +24,7 @@ class Main {
 
     public static void main(String[] args) {
         int[][] intervals = new int[][] { { 1, 3 }, { 8, 10 }, { 2, 6 }, { 15, 18 } };
-        intervals = maxSubArray(intervals);
+        intervals = mergeIntervals(intervals);
         // merge Intervals
         for (int i = 0; i < intervals.length; i++) {
             System.out.println(Arrays.toString(intervals[i]));

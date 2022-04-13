@@ -7,7 +7,7 @@ class Main {
             farthest = Math.max(farthest, i + nums[i]);
             // System.out.print("f"+farthest);
             // System.out.print("c"+currentJumpEnd);
-            System.out.println();
+            // System.out.println();
 
 
             // if we have come to the end of the current jump,
