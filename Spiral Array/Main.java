@@ -17,12 +17,17 @@ class Main {
             for (int i = up + 1; i <= down; i++) {
                 result.add(matrix[i][right]);
             }
-            for (int i = right - 1; i >= left; i--) {
-                result.add(matrix[down][i]);
+            if (up != down) {
+                for (int i = right - 1; i >= left; i--) {
+                    result.add(matrix[down][i]);
+                }
             }
-            for (int i = down - 1; i > up; i--) {
-                result.add(matrix[i][left]);
+            if (left != right) {
+                for (int i = down - 1; i > up; i--) {
+                    result.add(matrix[i][left]);
+                }
             }
+
             up++;
             down--;
             left++;
