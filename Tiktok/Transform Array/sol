@@ -1,0 +1,27 @@
+def sol(a,b):
+    l1 = list(map(int, a.split()))
+    l2 = list(map(int, b.split()))
+    temp1 = []
+    temp2 = []
+    for i in  range(len(l1)):
+        if l1[i] != l2[i]:
+            temp1.append(l1[i])
+            temp2.append(l2[i])
+    k = 0
+    
+    for j in range(min(l2), max(l2)):
+        print(j)
+        for i in range(len(temp1)):
+            temp1[i] = temp1[i] + j
+        if temp1 == temp2:
+            k = 1
+            break
+    
+    if k == 1:
+        return True
+    else:
+        return False
+a = "1 2 3 4 0 5 4 1 6"
+b = "1 2 3 4 1 6 2 5 5"
+print(sol(a,b))
+
