@@ -69,5 +69,8 @@ class Main {
         String b = "1 2 3 4 1 6 2 5 5";
         System.out.println(sol(a, b));
         System.out.println(sol2(a, b));
+        int x = 3;
+        int y = 5;
+        System.out.println((x^y) + (x&y)*2);
     }
 }
